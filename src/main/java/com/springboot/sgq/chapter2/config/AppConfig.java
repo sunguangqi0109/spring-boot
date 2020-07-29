@@ -40,11 +40,11 @@ public class AppConfig {
             return dataSource;
     }
 
-    @Bean(name="dIBussinessPerson")
-    public DIBussinessPerson initDIBUssinessPerson(){
-        DIBussinessPerson diBussinessPerson = new DIBussinessPerson();
-        return diBussinessPerson;
-    }
+//    @Bean(name="dIBussinessPerson")
+//    public DIBussinessPerson initDIBUssinessPerson(){
+//        DIBussinessPerson diBussinessPerson = new DIBussinessPerson();
+//        return diBussinessPerson;
+//    }
 
     @Bean(name="dIPerson")
     public DIDog initDIPerson(){

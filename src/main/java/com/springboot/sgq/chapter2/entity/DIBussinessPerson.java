@@ -7,9 +7,16 @@ import org.springframework.stereotype.Component;
 @Component
 public class DIBussinessPerson implements DIPerson {
 
-    @Autowired          //byType 类型的注入
-    @Qualifier("DICat")
+    //byType 类型的注入
+//    @Autowired
+//    @Qualifier("DICat")
     private DIAnimal diAnimal = null;
+
+//    public DIBussinessPerson(){}
+
+    public DIBussinessPerson(@Autowired  @Qualifier("DIDog") DIAnimal diAnimal) {
+        this.diAnimal = diAnimal;
+    }
 
     @Override
     public void service() {
