@@ -1,9 +1,6 @@
 package com.springboot.sgq.chapter2.config;
 
-import com.springboot.sgq.chapter2.entity.DIBussinessPerson;
-import com.springboot.sgq.chapter2.entity.DIPerson;
-import com.springboot.sgq.chapter2.entity.Person;
-import com.springboot.sgq.chapter2.entity.User;
+import com.springboot.sgq.chapter2.entity.*;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
@@ -29,9 +26,13 @@ public class IOCTest {
 //        DIPerson diPerson = ctx3.getBean(DIBussinessPerson.class);
 //        diPerson.service();
 
-        ApplicationContext ctx4 = new AnnotationConfigApplicationContext(AppConfigPerson.class);
-        DIPerson diPerson2 = ctx4.getBean(DIBussinessPerson.class);
-        diPerson2.service();
+//        ApplicationContext ctx4 = new AnnotationConfigApplicationContext(AppConfigPerson.class);
+//        DIPerson diPerson2 = ctx4.getBean(DIBussinessPerson.class);
+//        diPerson2.service();
+
+        ApplicationContext ctx5 = new AnnotationConfigApplicationContext(AppConfigPerson.class);
+        DataBaseProperties diPerson2 = ctx5.getBean(DataBaseProperties.class);
+
 
 
     }
