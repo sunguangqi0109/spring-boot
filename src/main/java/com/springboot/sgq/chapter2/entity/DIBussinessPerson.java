@@ -14,9 +14,9 @@ public class DIBussinessPerson implements DIPerson {
 
 //    public DIBussinessPerson(){}
 
-    public DIBussinessPerson(@Autowired  @Qualifier("DIDog") DIAnimal diAnimal) {
-        this.diAnimal = diAnimal;
-    }
+//    public DIBussinessPerson(@Autowired  @Qualifier("DIDog") DIAnimal diAnimal) {
+//        this.diAnimal = diAnimal;
+//    }
 
     @Override
     public void service() {
@@ -24,7 +24,10 @@ public class DIBussinessPerson implements DIPerson {
     }
 
     @Override
+    @Autowired
+    @Qualifier("DICat")
     public void setAnimal(DIAnimal dianimal) {
+        System.out.println("这是延迟依赖注入");
         this.diAnimal  = dianimal;
     }
 }
