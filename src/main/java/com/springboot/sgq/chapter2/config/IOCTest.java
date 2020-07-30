@@ -33,6 +33,10 @@ public class IOCTest {
         ApplicationContext ctx5 = new AnnotationConfigApplicationContext(AppConfigPerson.class);
         DataBaseProperties diPerson2 = ctx5.getBean(DataBaseProperties.class);
 
+        AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext(AppConfigPerson.class);
+        ScopeBean sc1 = ctx.getBean(ScopeBean.class);
+        ScopeBean sc2 = ctx.getBean(ScopeBean.class);
+        System.out.println(sc1 == sc2);
 
 
     }
